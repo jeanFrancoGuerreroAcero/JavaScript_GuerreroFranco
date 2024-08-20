@@ -44,3 +44,30 @@ function orden(){
 llegada= prompt("ingrese la orden de llegada: ");
 resultado= orden();
 console.log(resultado);
+
+function multipli(a,b){
+    multi = a * b;
+
+    return multi;
+}
+
+console.log(multipli(2,5));
+
+//
+function sumar(){
+    suma = 3+2
+    return (suma)
+}
+console.log(sumar())
+
+function nombre(a){
+    console.log("Hola ", a);
+}
+
+nombre("pedro");
+
+function pepe(){
+    console.log("hola pepe");
+}
+
+pepe()
