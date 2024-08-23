@@ -34,4 +34,4 @@ Tiene un funcionamiento sencillo en donde el programa especifica las opciones qu
 
 ## Realizado por 
 
-- jean franco Guerrero Acero estudiante de Campuslands, para trabajo sobre JavaScript  
+- jean franco Guerrero Acero estudiante de Campuslands, para trabajo sobre JavaScript .
