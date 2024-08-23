@@ -48,7 +48,7 @@ var arr=  {
     }
     ]
 };
-
+//
 var booleano= true
 while (booleano){
     console.log("----------------------");
