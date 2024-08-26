@@ -42,7 +42,8 @@ while(booleanito){
   console.log("1. PRODUCTOS");
   console.log("2. PROVEEDORES");
   console.log("3. PEDIDOS");
-  console.log("4. SALIR DEL PROGRAMA");
+  console.log("4. FILTRAR")
+  console.log("5. SALIR DEL PROGRAMA");
   var QueDesea = prompt("")
 
   if (QueDesea=="1"){
@@ -85,10 +86,10 @@ while(booleanito){
         "supplierId":idProveedor
       };
       arr["products"].push(guardado);
-      var contador=0
+      var contadorp=0
       for (var i of arr["products"]){
-        contador=contador+1;
-        console.log(contador);
+        contadorp=contadorp+1;
+        console.log(contadorp);
         console.log("ID:",i["id"]);
         console.log("NOMBRE:",i["name"]);
         console.log("CATEGORIA:",i["category"]);
@@ -105,7 +106,7 @@ while(booleanito){
       console.log("----------------");
       console.log("");
       
-      var contador=0
+      var contadoras=0
       for (var i of arr["products"]){
         contador=contador+1;
         console.log(contador);
@@ -153,9 +154,17 @@ while(booleanito){
         console.log("-----------------");
         console.log("");
 
+        var contador=1;
+        for (var i of arr["products"]){
+          contador=contador+1;
+          console.log(contador);
+          console.log("NOMBRE:",i["name"]);
+        };
+        console.log("INGRESE EL QUE DESEA ACTUALIZAR");
+        var DeseaActunOMBRE=prompt("");
         console.log("INGRESE EL NUEVO NOMBRE");
         var nuevoNombre=prompt("");
-        arr["products"]["name"]=nuevoNombre;
+        arr["products"]["name"](DeseaActunOMBRE-1,1)=nuevoNombre;
       };
       if (DeseaActualizarProducto=="2"){
         console.clear();
@@ -508,10 +517,166 @@ while(booleanito){
       };
     };
   };
-  if (QueDesea=="4"){
+  if(QueDesea=="5"){
+    console.clear();
+    console.log("-------------------");
+    console.log("BIENVENIDO A LA SECCION DE FILTRAR");
+    console.log("-------------------");
+    console.log("");
+
+    console.log("QUE DESEA FILTRAR");
+    console.log("1. PRODUCTOS");
+    console.log("2. PEDIDOS");
+    var opcionFil=prompt("");
+    if(opcionFil=="1"){
+      console.log("QUE DESEA FILTRAR");
+      console.log("1. PRODUCTOS");
+      console.log("2. PROVEEDORES");
+      console.log("3. PEDIDOS");
+      var filtrar=prompt("");
+      if (filtrar=="1"){
+        console.clear();
+        console.log("---------------");
+        console.log("FILTRO PRODUCTO");
+        console.log("---------------");
+        console.log("");
+  
+       
+        console.log("COMO DESEA FILTRAR");
+        console.log("1. NOMBRE");
+        console.log("2. CATEGORIA");
+        console.log("3. ID DEL PROVEEDOR");
+        var DeseaFiltrar=prompt("");
+  
+        if(DeseaFiltrar=="1"){
+          console.log("-----------------");
+          console.log("FILTRO POR NOMBRE");
+          console.log("-----------------");
+  
+          console.log("ingrese el nombre");
+          var nombreFiltro=prompt("")
+          for(var i of arr.orders){
+            if(nombreFiltro==i.name){
+              console.log("");
+              console.log("ID",i["id"]);
+              console.log("NOMBRE",i["name"]);
+              console.log("CATEGORIA",i["category"]);
+              console.log("PRECIO",i["price"]);
+              console.log("CANTIDAD EN STOCK",i["quantityInStock"]);
+              console.log("ID PROVEEDOR",i["supplierId"]);
+            };
+          };
+        };
+        if(DeseaFiltrar=="2"){
+          console.log("-----------------");
+          console.log("FILTRO POR CATEGORIA");
+          console.log("-----------------");
+  
+          console.log("ingrese la categoria");
+          var categoriaFiltro=prompt("")
+          for(var i of arr.orders){
+            if(categoriaFiltro==i.category){
+              console.log("");
+              console.log("ID",i["id"]);
+              console.log("NOMBRE",i["name"]);
+              console.log("CATEGORIA",i["category"]);
+              console.log("PRECIO",i["price"]);
+              console.log("CANTIDAD EN STOCK",i["quantityInStock"]);
+              console.log("ID PROVEEDOR",i["supplierId"]);
+            };
+          };
+        };
+        if(DeseaFiltrar=="3"){
+          console.log("-------------------");
+          console.log("FILTRO POR ID DEL PROVEEDOR");
+          console.log("-------------------");
+  
+          console.log("ingrese el id de el proveedor");
+          var idProveedorFiltro=prompt("")
+          for(var i of arr.orders){
+            if(idProveedorFiltro==i.supplierId){
+              console.log("");
+              console.log("ID",i["id"]);
+              console.log("NOMBRE",i["name"]);
+              console.log("CATEGORIA",i["category"]);
+              console.log("PRECIO",i["price"]);
+              console.log("CANTIDAD EN STOCK",i["quantityInStock"]);
+              console.log("ID PROVEEDOR",i["supplierId"]);
+            };
+          };
+        };
+      };
+    };
+    if(DeseaFiltrar=="1"){
+      console.clear();
+      console.log("-------------------");
+      console.log("FILTRAR POR PEDIDOS");
+      console.log("-------------------");
+      console.log("");
+
+      console.log("COMO DESEA FILTRAR");
+      console.log("1. ESTADO");
+      console.log("2. RANGO");
+      console.log("3. ID PRODUCTO");
+      var filtroPEdi=prompt("");
+      if (filtroPEdi=="1"){
+        console.log("-------------------");
+        console.log("FILTRO ESTADO DE EL PEDIDO");
+        console.log("-------------------");
+
+        console.log("ingrese el estado de el pedido");
+        var estadoFiltro=prompt("")
+        for(var i of arr.orders){
+          if(estadoFiltro==i.status){
+            console.log("");
+            console.log("ID PEDIDO:",i["orderId"]);
+            console.log("NOMBRE:",i["productId"]);
+            console.log("CATEGORIA:",i["quantity"]);
+            console.log("FECHA:",i["orderDate"]);
+            console.log("ESTADO:",i["status"]);
+          };
+        };
+      };
+      if (filtroPEdi=="2"){
+        console.log("-------------------");
+        console.log("FILTRO RANGO DE FECHAS");
+        console.log("-------------------");
+
+        console.log("ingrese la fecha del pedido");
+        var fechaFiltro=prompt("")
+        for(var i of arr.orders){
+          if(fechaFiltro==i.orderDate){
+            console.log("");
+            console.log("ID PEDIDO:",i["orderId"]);
+            console.log("NOMBRE:",i["productId"]);
+            console.log("CATEGORIA:",i["quantity"]);
+            console.log("FECHA:",i["orderDate"]);
+            console.log("ESTADO:",i["status"]);
+          };
+        };
+      };
+      if (filtroPEdi=="3"){
+        console.log("-------------------");
+        console.log("FILTRO ID DEL PRODUCTO");
+        console.log("-------------------");
+
+        console.log("ingrese el id de el producto");
+        var idProductFiltro=prompt("")
+        for(var i of arr.orders){
+          if(idProductFiltro==i.productId){
+            console.log("");
+            console.log("ID PEDIDO:",i["orderId"]);
+            console.log("NOMBRE:",i["productId"]);
+            console.log("CATEGORIA:",i["quantity"]);
+            console.log("FECHA:",i["orderDate"]);
+            console.log("ESTADO:",i["status"]);
+          };
+        };
+      };
+    };
+  };
+  if (QueDesea=="5"){
     console.log("PROGRAMA FINALIZADO");
     var booleanito=false;
-  }
-  
-  var booleanito=false;
+  };
 };
