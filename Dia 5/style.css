@@ -1,0 +1,42 @@
+#seccion{
+    background-color:  rgb(216, 80, 80);
+    border-radius: 2em;
+}
+
+#parteProveedores{
+    text-align: center;
+    background-color:  rgb(216, 80, 80);
+    border-radius: 2em;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 300em;
+}
+
+.cuadro{
+    text-align: center;
+}
+
+#ppp{
+    text-align: left;
+    font-size: 1.3em;
+}
+
+#añadirProducto{
+    background-color: rgb(216, 80, 80);
+    width: 10em;
+    height: 2.5em;
+}
+
+.table{
+    width: 20em;
+}
+
+table,td,th{
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+td,th{
+    padding: 1vw;
+}
