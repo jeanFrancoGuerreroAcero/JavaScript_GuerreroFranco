@@ -5,7 +5,7 @@ function obtenerJson(){
     .then(res=> res.json())
     .then(data=>{
         for(var i of data){
-            console.log("categoria",i["category"])
+            console.log("categoria:",i["category"])
         }
     })
 }
