@@ -1,0 +1,15 @@
+body{
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#mostrar{
+    background-image: url(./comic.jpg) ;
+    background-repeat: no-repeat;
+    width: 60em;
+    border-radius: 5em;
+}
+
+#titulo{
+    color: white;
+}

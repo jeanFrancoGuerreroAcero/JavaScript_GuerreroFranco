@@ -59,3 +59,22 @@ function orders(){
         })
 }
 orders();
+
+function crearProduct(){
+    document.getElementById("productos").addEventListener("submit",)
+    var nombre = document.getElementById('inputNOMBRE').value;
+    var categoria = document.getElementById('inputCATEGORIA').value;
+    var precio = document.getElementById('inputPRECIO').value;
+    var cantidad = document.getElementById('inputCANTIDAD').value;
+    var idProveedor = document.getElementById('inputPROVEEDOR').value;
+
+    data["products"].push(guardado={
+                "name": nombre,
+                "category": categoria,
+                "price": precio,
+                "quantityInStock": cantidad,
+                "supplierId": idProveedor
+    } );
+    products();
+}
+crearProduct()
