@@ -10,7 +10,7 @@ function mostrar(link){
     .then(data =>{
         document.getElementById("mostrar").innerHTML =`
         <br></br>
-        <img src="${data.image.url}" alt="${data.name}" style="width:15em">
+        <img src="${data.image.url}" alt="${data.name}" style="width:15em",border-radius=5em">
         <p><strong>Nombre completo:</strong> ${data.biography["full-name"]}</p>
         <p><strong>Inteligencia:</strong> ${data.powerstats.intelligence}</p>
         <p><strong>Fuerza:</strong> ${data.powerstats.strength}</p>
