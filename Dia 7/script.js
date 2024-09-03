@@ -11,6 +11,10 @@ function buscarPeople() {
   let espe = "https://swapi.py4e.com/api/species/"+busEspe;
   mostrarEspecies(espe)
 
+  mostarFilms(link)
+
+  mostrarStarchi(link)
+
   mostrarVehicles(link)
 
   ultimo(link)
@@ -102,7 +106,66 @@ function mostrarVehicles(link){
         })
 }})}
 
+function mostrarStarchi(link){
+  const tableBody = document.querySelector("#tabla tbody")
+  fetch(link)
+    .then(res => res.json())
+    .then(Data => {
+    let stass= document.getElementById("tabla9")
+      for(const i of Data.starships){
+        fetch(i)
+        .then(res => res.json())
+        .then(sta => {
+          stass.innerHTML+=`
+          <table class="table table-dark">
+                <tbody>
+                  <tr>
+                  <th scope="row">starchifh</th>
+                    <td> <ul class="list-group">
+                        <li class="list-group-item">Name:${sta.name}</li>
+                        <li class="list-group-item">Model:${sta.model}</li>
+                        <li class="list-group-item">Manufacturer:${stass.manufacturer}</li>
+                        <li class="list-group-item">Cost in Credits:${sta.cost_in_credits}</li>
+                        <li class="list-group-item">Masx Atmosphening speed:${sta.max_atmosphering_speed}</li>
+                        <li class="list-group-item">Crew:${sta.crew}</li>
+                        <li class="list-group-item">Passengers:${sta.passengers}</li>
+                        <li class="list-group-item">Cargo capacity:${sta.cargo_capacity}</li>
+                        <li class="list-group-item">Passengers:${sta.passengers}</li>
+                        <li class="list-group-item">Consumables:${sta.consumables}</li>
+                        <li class="list-group-item">Hiperdrive Rating:${sta.hyperdrive_rating}</li>
+                        <li class="list-group-item">Mgtl:${sta.MGLT}</li>
+                        <li class="list-group-item">Starchip class:${sta.starship_class}</li>
+                        <li class="list-group-item">Created:${sta.created}</li>
+                        <li class="list-group-item">Edited:${sta.edited}</li>
+                        <li class="list-group-item">Url:${sta.url}</li>`})}
+    })};
 
+function mostarFilms(link){
+  const tableBody = document.querySelector("#tabla tbody")
+  fetch(link)
+    .then(res => res.json())
+    .then(Data => {
+    let filmss= document.getElementById("tabla5")
+      for(const i of Data.films){
+        fetch(i)
+        .then(res => res.json())
+        .then(fi => {
+          filmss.innerHTML+=`
+          <table class="table table-dark">
+                <tbody>
+                  <tr>
+                  <th scope="row">films</th>
+                    <td> <ul class="list-group">
+                        <li class="list-group-item">Name:${fi.title}</li>
+                        <li class="list-group-item">Episode Id:${fi.episode_id}</li>
+                        <li class="list-group-item">Opening Crawl:${fi.opening_crawl}</li>
+                        <li class="list-group-item">Director:${fi.director}</li>
+                        <li class="list-group-item">Producer:${fi.producer}</li>
+                        <li class="list-group-item">Release Data:${fi.release_date}</li>
+                        <li class="list-group-item">Created:${fi.created}</li>
+                        <li class="list-group-item">Edited:${fi.edited}</li>
+                        <li class="list-group-item">Url:${fi.url}</li>`})}
+    })};
 
 function mostrarHomeworld(home) {
   const tableBody = document.querySelector("#tabla2 tbody")
@@ -156,24 +219,6 @@ function mostrarEspecies(espe) {
                     <li class="list-group-item">Created:${Data.created}</li>
                     <li class="list-group-item">Edited:${Data.edited}</li>
                     <li class="list-group-item">Url:${Data.url}</li>
-                  </ul></td>
-              </tr>
-                </tbody>
-          </table>`})
-}
-
-function mostrarStarchi(starchi) {
-  const tableBody = document.querySelector("#tabla6 tbody")
-  fetch(starchi)
-    .then(res => res.json())
-    .then(Data => {
-      document.getElementById("tabla6").innerHTML =`
-      <table class="table table-dark">
-            <tbody>
-              <tr>
-              <th scope="row">Starchift</th>
-                <td> <ul class="list-group">
-                    <li class="list-group-item">Nombre:${Data.count}</li>
                   </ul></td>
               </tr>
                 </tbody>
