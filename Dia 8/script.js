@@ -5,6 +5,11 @@ document.getElementById("boton1").addEventListener("click",function(){
   consumir(pokemonId)
 })
 
+document.getElementById("boton1").addEventListener("click", function(){
+  pokemonId = parseInt(document.getElementById("id").value, 10);
+  consumir(pokemonId)
+})
+
 document.getElementById("boton2").addEventListener("click",function(){
   pokemonId++;
   consumir(pokemonId)
@@ -23,8 +28,6 @@ function consumir(id){
     let pokemon= "https://pokeapi.co/api/v2/pokemon/"+id;
     mostrarPokemon(pokemon)
 
-    document.getElementById("lado").innerHTML = id
-
     mostrarImage(pokemon)
 }
 
@@ -35,7 +38,7 @@ function mostrarPokemon(pokemon){
       .then(Data => {
         let datos= document.getElementById("derecha")
         datos.innerHTML = `
-        <p>${Data.forms[0]["name"]}</p>
+        <p>${Data.id}-${Data.forms[0]["name"]}</p>
         `})
 }
 

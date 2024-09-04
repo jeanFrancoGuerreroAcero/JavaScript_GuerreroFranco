@@ -3,87 +3,47 @@
     src: url(./waltograph42.ttf);
 }
 
-#videito {
+body{
+    background-image: url(./imagesFondo.jpg);
+    background-repeat: no-repeat;
+}
+
+#titulo{
+    color: black;
+    font-family: fuente;
+    font-size: 3em;
+}
+
+#imagen{
     position: absolute;
-    width: 100vw;
+    margin-top: 7em;
+    margin-left: 37em;
+    width: auto;
+    height: auto;
+    border-radius: 2em;
+    box-shadow: 10px 10px 10px;
+    z-index: 4;
 }
 
-#container {
-    display: flex;
-    justify-content: center;
+#nombre{
+    color: white;
+    font-family: fuente;
+    font-size: 4em;
+    margin-left: 10em;
+    z-index: 5;
 }
 
-#entrada, #button {
-    margin-top: 45vw;
-    z-index: 1;
-    border-radius: 1vw;
-    border: none;
+#caja{
+    margin-top: 2em;
+    margin-left: 42em;
+    color: white;
 }
 
-#fondo2 {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
+#negro{
+    position: relative;
+    left: 25em;
+    width: 70em;
+    height: auto;
     background-color: black;
-    top: 50vw;
-}
-
-#output {
-    position: absolute;
-    top: 70vw;
-}
-
-#welcome {
-    position: absolute;
-    font-family: fuente;
-    font-size: 5vw;
-    color: white;
-}
-
-#imagen {
-    position: absolute;
-    top: -5vw;
-    left: 25vw;
-    scale: 2;
-    mask-image: linear-gradient(
-        black 80%, 
-        transparent
-    );
-    border-radius: 1vw;
-}
-
-#nombre {
-    position: absolute;
-    top: 10vw;
-    left: 25.5vw;
-    color: white;
-    font-size: 5vw;
-    font-family: fuente;
-}
-
-#movie {
-    position: absolute;
-    color: white;
-    font-size: 3vw;
-    width: 50vw;
-    left: -40vw;
-    top: -10vw;
-}
-
-#fecha {
-    position: absolute;
-    color: white;
-    font-size: 3vw;
-    width: 50vw;
-    left: -40vw;
-    top: -5vw;
-}
-
-#game {
-    position: absolute;
-    color: white;
-    font-size: 3vw;
-    width: 50vw;
-    left: -40vw;
-    top: 0vw;
+    border-radius: 3em;
 }
