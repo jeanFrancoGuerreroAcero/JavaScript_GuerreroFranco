@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.general{
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    font-family:cursive;
+}
+
+.cuadro{
+    display: flex;
+    position: relative;
+    margin-block: -13em;
+    justify-content: center;
+    background-color:white;
+    width: 50em;
+    height: 30em;
+    margin-top: 10em;
+    border-radius: 3px;
+}
+
+#image{
+    position: relative;
+    margin-top: 2em;
+    background-color: #000;
+    width:10em;
+    height:10em;
+    border-radius:150em;
+    border: 3px black solid
+}
+
+#nombre{
+    position: absolute;
+    padding-top: 9em;
+    font-size: 1.6em;
+    opacity: 0.5;
+}
+
+#abaNombre{
+    position: absolute;
+    padding-top: 8.5em;
+}
+
+.logos{
+    position: absolute;
+    display: flex;
+    width: 24em;
+    height: 3em;
+    top: 22em;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+#imaLogo{
+    top: 2.5em;
+    width: 2em;
+    height: 6em;
+    transform: translateY(-0em);
+    transition: 2s ease all;
+}
+
+#imaLogo:hover{
+    transform: translateY(-3.3em);
+    transition: 2s
+}
+
+.cajaBlanca{
+    position: absolute;
+    background-color: #000;
+    width: 3em;
+    height: 2em;
+}
