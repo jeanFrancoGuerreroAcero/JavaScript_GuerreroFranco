@@ -9,7 +9,7 @@
 }
 
 body{
-    background-color: green ;
+    background-color: black;
 }
 
 .arriba{
@@ -25,15 +25,17 @@ body{
 .cartas{
     position: relative;
     top: 8em;
+    height: 14em;
     display: flex;
     justify-content: space-around;
 }
 
-.victory{
+#victory{
     display: flex;
     position: relative;
     justify-content: center;
     top: 5em;
+    height: 0.1em;
     font-size: 4em;
     color: gold;
     font-family: casino;
@@ -49,11 +51,9 @@ body{
 }
 
 .barraAbajo{
-    width: 120em;
     height: 6em;
-    position: absolute;
-    margin-top: 27em;
-    background-color: rgb(190, 21, 21);
+    position: relative;
+    margin-top: 33em;
 }
 
 #botones{
@@ -105,4 +105,15 @@ body{
     top: 1em;
     width: 10em;
     height: 12em;
+}
+
+img{
+    width: 10em;
+    height: 10em;
+}
+
+.fondo img{
+    width: 80em;
+    height: 50em;
+    background-repeat: no-repeat;
 }
