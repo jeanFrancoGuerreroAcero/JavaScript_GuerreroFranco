@@ -9,32 +9,35 @@
 }
 
 body{
-    background-color: black;
+    background-image: url(./img/piso1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .arriba{
-    top: 2em;
+    top: 3em;
     position: relative;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     font-size: 2em;
     font-family: casino;
-    color: white;
+    color: brown;
 }
 
 .cartas{
     position: relative;
-    top: 8em;
+    top: 17em;
     height: 14em;
     display: flex;
     justify-content: space-around;
+    right: 15em;
 }
 
 #victory{
     display: flex;
     position: relative;
     justify-content: center;
-    top: 5em;
+    top: 8em;
     height: 0.1em;
     font-size: 4em;
     color: gold;
@@ -57,19 +60,16 @@ body{
 }
 
 #botones{
+    top: 22em;
     font-size: 1.3em;
     position: relative;
-    top: 1em;
     display: flex;
     justify-content: space-around;
 }
 
-#dinero{
-    color: white;
-}
-
 #button{
-    background-color: gold;
+    color: white;
+    background-color: brown;
     border: 1px black solid;
     border-radius: 5px;
     padding: 0.5em;
@@ -77,7 +77,8 @@ body{
 }
 
 #buttonQuedarse{
-    background-color: gold;
+    color: white;
+    background-color: brown;
     border: 1px black solid;
     border-radius: 5px;
     padding: 0.5em;
@@ -95,8 +96,8 @@ body{
 
 #player1{
     position: absolute;
-    width: 10em;
-    height: 12em;
+    width: 19em;
+    height: 11em;
 }
 
 #player2{
@@ -112,8 +113,11 @@ img{
     height: 10em;
 }
 
-.fondo img{
-    width: 80em;
+#mesa {
+    position: absolute;
+    left: 14vw;
+    width: 88em;
     height: 50em;
-    background-repeat: no-repeat;
+    border-radius: 30px;
+    box-shadow: 5px 5px 1px color(rgb(97, 95, 95));
 }

@@ -7,22 +7,24 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="fondo"></div>
     <p id="header">CASINO</p>
-    <div class="arriba">
-        <p>PLAYER BLACKJACK</p>
-    </div>
-    <div class="cartas">
-        <div id="cartasPlayer1"></div>
-        <div id="cartasPlayer2"></div>
-    </div>
-    <div id="victory">
-    </div>
-    <div class="barraAbajo">
+    <div class="fondo">
+        <img id="mesa" src="./img/mesaa.png" alt="">
+        <div class="arriba">
+            <p>PLAYER BLACKJACK</p>
+            <p>DEALER</p>
+        </div>
+        <div class="cartas">
+            <div id="cajaJugador"></div>
+            <div id="cartasPlayer1"></div>
+            <div id="cartasPlayer2"></div>
+        </div>
+        </div>
         <div id="botones">
             <button id="buttonQuedarse" onclick="detenerse()">Quedarse</button>
             <button id="button" onclick="aparecer()">pedir</button>
         </div>
+        <div id="victory"></div>
     </div>
 </body>
 <script src="./script.js"></script>
