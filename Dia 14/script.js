@@ -9,6 +9,7 @@ class crearBarra extends HTMLElement {
                 <input id="input1" type="text" placeholder="search">
             </div>
         </div>
+
         <div class="jjj">
         </div>
         `
@@ -34,7 +35,6 @@ document.addEventListener("keyup", e=>{
         })
     }
 })
-
 
 function ddd(obtener){
     fetch(obtener)
